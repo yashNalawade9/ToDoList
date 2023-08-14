@@ -1,0 +1,235 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: sans-serif;
+    display: grid;
+    grid-template-columns: 1.5fr 8fr;
+
+}
+
+h1{
+    padding: 0 10px;
+}
+h2{
+    padding: 10px;
+}
+
+.sidebar{
+    /* display: inline; */
+    position: relative;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    background-color:  #A3BCB6;
+    
+}
+nav ul li{
+    list-style-type: none;
+    padding: 10px;
+    font-weight: 500;
+    font-size: 18px;
+}
+nav ul li:hover{
+    background-image: linear-gradient(to right, #8360c3, #2ebf91);
+    border-radius: 5px;
+    color: white;
+    font-weight: 525;
+}
+nav .logo{
+    padding: 10px;
+    /* margin-left: 10px; */
+    text-align: center;
+}
+nav ul{
+    margin: 10px;
+}
+
+hr{
+    margin: 2px;
+}
+
+.dashboard{
+    /* background-color: lightblue; */
+    padding: 30px;
+    background-color: #A3BCB6;
+    margin: 10px 20px 0 20px ;
+    /* width: 60%; */
+    border-radius: 8px;
+}
+
+p{
+    font-size: 15px;
+    margin-left: 20px;
+}
+.main-section{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+.container{
+    background-color: #f1f8fb;
+    /* padding: 30px 35px; */
+    padding: 3px;
+    border-radius: 5px;
+}
+.input-box{
+    display: grid;
+    grid-template-columns: 8fr 2.5fr;
+    gap: 20px;
+}
+.input-box input{
+    border: none;
+    padding: 8px;
+    background-color: transparent;
+    font-size: 15px;
+    color: black(75, 69, 69, 0.445);
+    border-bottom: 2px solid rgb(163, 159, 159);
+}
+
+.input-box input:focus{
+    outline: none;
+    border-color: black;
+}
+.input-box button{
+    font-size: 15px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: black;
+    color: white;
+   
+}
+
+.card{
+    background-color: black;
+    color: white;
+    width: 220px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    /* margin: 50px; */
+    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.3);
+    border-radius: 22px;
+    height: 200px;
+    /* transition: all 10ms; */
+    margin: 20px;
+}
+
+/* .card:hover{
+    width: 222px;
+    height: 202px;
+} */
+
+.card p{
+    height: 80%;
+    width: 85%;
+    overflow-y: auto;
+    overflow-wrap: break-word;
+    padding: 5px;
+    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 550;
+    font-size: 16px;
+    text-align: left;
+    /* flex: 0 0 215px; */
+}
+
+p::-webkit-scrollbar{
+    /* display: none; */
+    width: 5px;
+
+}
+::-webkit-scrollbar-track{
+    border-radius: 10px;
+    box-shadow: inset 0 0 2px gray;
+}
+::-webkit-scrollbar-thumb{
+    background-color: rgb(155, 240, 85);
+    border-radius: 10px;
+}
+
+
+.task{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap ;
+    row-gap: 30px;
+    height: 100%;
+    margin: 10px 20px 5px 20px;
+    border-radius: 8px;
+    /* background-color: #2ebf91; */
+    overflow-y: scroll;
+    padding: 20px;
+    /* padding: 40px calc((100% - (255px * 3)) / 2); */
+    
+}
+.task::-webkit-scrollbar{
+    display: none;
+}
+.card button{
+    width: 90%;
+    margin: 5px;
+    border: none;
+    height: 25px;
+    border-radius: 5px;
+    background-color: #39603D;
+    font-weight: 600;
+    /* font-size: 15px; */
+    color: white;
+}
+.card .btnSection{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card.completed {
+    background-color: #d1d1d1;
+    /* text-decoration: line-through; */
+    opacity: 0.7;
+}
+
+i{
+    font-size: 15px;
+    color: rgb(59, 255, 147);
+    margin: 0 10px;
+}
+@media (max-width:600px) {
+    nav{
+        display: none;
+    }
+    .dashboard{
+        width: 390px;
+    }
+    .task{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        flex-flow: wrap;
+        /* justify-content: center; */
+        justify-content: flex-start;
+    }
+    .card{
+        width: 100%;
+        height: 10vh;
+        display: grid;
+        grid-template-columns: 6fr 5.5fr;
+    }
+    .card p{
+        overflow: hidden;
+        overflow-y: auto;
+    }
+    .input-box{
+        grid-template-columns: 6.5fr 5fr;
+    }
+    
+}
